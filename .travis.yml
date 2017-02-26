@@ -2,7 +2,11 @@ language: ruby
 rvm:
 - 2.2.0
 sudo: false
+before_install:
+  - git config user.name "${GIT_USER_NAME}"
+  - git config user.email "{GIT_USER_EMAIL}"
 script: bundle exec rake deploy
+
 env:
   global:
     secure: PWC0CD828CcOIZcaRVsZ7f6raV63jzfzTGbsVhkejd+x2qXXoEHWtA4pBHxR6M0UxURINDC1yA6nU4vygA56GKAlGrG7MwfxFpBZUIetRfil0Ebv5pmxY+ItUa0Xmc6h6zOC8KQfeha7+MKs6zdRhvsV/rqlX9PrZPEfm+KizcBVV2AjqIv85D1/0isp/V3/8YgvDzL0VSyqc5+h/Nwy/f2Ge7F2XXytnGfXzrxeNv9jsvHDLZSMU/yUEFQWGaaxBFjtsrkGVpy5NI+Kcfda11l431az5tj03FQt63QfAxTxUS5imWBdZhiOWnYOCQlp4T++KxgeKA1ffQILHdibG0He9POn+pOR8a9H49Xd7roEgVyEzseLqKCD2zMEkwRpi/hmtvHHxmEWZ+PqiDhAHBfWBmkp4cMRYkf4Nv7GoMTOjdMUVR1pvepPgSNvjDLOuTGtA2ODiXlxtNR+AYtzpMveQXrlVYHl7+mZxz1gAOkAdFomabSG88guqySav9zJ1rU1Lm+LeMgknfO7Mua+x2HL7AGaJnL+C85TjHwyIp5enEfaLpBMrJF/L34lQIrQYLh3V8sWLaPEoAC7rweuwfYp4C/jW5DmHU+ucq+1RKZUlTURhlY0zgn9Pbcf5WRNVO6yv/B2p0qtMbXzAG1ITl3hqrXApou4MDEWibwJbx0=
